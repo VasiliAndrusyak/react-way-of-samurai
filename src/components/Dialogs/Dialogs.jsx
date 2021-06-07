@@ -16,11 +16,12 @@ const Dialogs = (props) => {
         let message = newMessage.current.value;
         props.addMessage(message);
 
+
     }
 
     return (
-        <div className={s.dialogs} >
-                <div className={s.dialogsItems} addMessage = {props.addMessage}>
+        <div  className={s.dialogs} >
+                <div className={s.dialogsItems} >
                     {dialogsElements}
                 </div>
                 <div className={s.messages} >{messagesElements}
@@ -33,5 +34,5 @@ const Dialogs = (props) => {
 
     )
 }
-
+//addMessage = {props.addMessage}
 export default Dialogs;
