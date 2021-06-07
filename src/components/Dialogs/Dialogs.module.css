@@ -1,0 +1,30 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 1fr 2fr ;
+
+}
+
+.dialog {
+    padding-left: 50px;
+    padding-top: 50px;
+    background: transparent url(
+    'https://i.pinimg.com/originals/0c/a9/e2/0ca9e28dcb12dc698cfd2beda6d6fa64.jpg'
+    ) no-repeat 1px 40px / 30px 30px;
+}
+
+.dialogsItems{
+    padding: 10px;
+}
+
+.dialogsItems.active {
+    color: black;
+}
+
+.messages .messages {
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 50px;
+    background: transparent url(
+    'https://avatarko.ru/img/kartinka/2/Gubka_Bob.jpg'
+    ) no-repeat 1px 40px / 30px 30px;
+}
