@@ -6,9 +6,13 @@ import Profile from './components/Profile/Profile';
 import Dialogs from './components/Dialogs/Dialogs';
 import {BrowserRouter, Route } from "react-router-dom";
 
+
+
+
 const App = (props) => {
+    debugger;
     return (
-         <BrowserRouter>
+
             <div className='app-wrapper'>
                 <Header />
                 <Navbar />
@@ -19,8 +23,9 @@ const App = (props) => {
                                dispatch = {props.dispatch}  /> }/>
                     <Route path = '/dialogs'
                            render = { () => <Dialogs
-                               state = {props.state.dialogsPage}
-                               addMessage = {props.addMessage}
+                               store = {props.store}
+
+                               /*addMessage = {props.addMessage}*/
                                //addNewMessage = {props.addNewMessage}
                                // message = {props.state.dialogsPage.messages.message}
                            /> }/>
@@ -34,7 +39,7 @@ const App = (props) => {
                            render = { () => <Dialogs state = {props.state.dialogsPage} /> }/>
                 </div>
             </div>
-         </BrowserRouter>
+
      )
 }
 
