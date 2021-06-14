@@ -14,17 +14,13 @@ const Dialogs = (props) => {
     let newMessageBody = state.newMessageBody;
 
 
-    /*let newMessage = React.createRef();
-    let addMessage = () => {
-        let message = newMessage.current.value;
-        props.addMessage(message);
-    }*/
 
-    let onSendMessageClick = ()=> {
+    let onSendMessageClick = () => {
         props.store.dispatch(sendMessageCreator());
 
     }
-    let onNewMessageChange = (e)=> {
+
+    let onNewMessageChange = (e) => {
         let body = e.target.value;
         props.store.dispatch(updateNewMessageBodyCreator(body));
 
@@ -40,18 +36,12 @@ const Dialogs = (props) => {
                     <div>
                         <div><textarea value={newMessageBody}
                                        onChange={onNewMessageChange}
-                                       placeholder = 'Enter your message'></textarea></div>
-                        <div><button onClick = { onSendMessageClick } >Send</button></div>
-                        
-                    </div>
-                    {/*<textarea ref={newMessage} />
-                    <button onClick={addMessage} >add</button>*/}
-
+                                       placeholder = 'Enter your message' ></textarea></div>
+                        <div><button onClick = {onSendMessageClick} >Send</button></div>
                 </div>
-
+            </div>
         </div>
-
     )
 }
-//addMessage = {props.addMessage}
+
 export default Dialogs;
